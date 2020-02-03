@@ -17,10 +17,18 @@ namespace Sweepstakes
         //Member Methods (CAN DO)
         public Sweepstakes(string name)
         {
-            
+            Console.WriteLine("What would you like to name the Sweepstakes?");
+            string value = Console.ReadLine();
+            Console.WriteLine("You have named the Sweepstakes: " + value);
+            Console.ReadLine();
            
 
         }
+
+        public Sweepstakes()
+        {
+        }
+
         public void RegisterContestant(Contestant contestant)
         {
             contestant.Registrationnumber = contestants.Count;

@@ -11,13 +11,16 @@ namespace Sweepstakes
         static void Main(string[] args)
         {
 
+            Simulation simulation = new Simulation();
+            SweepstakesStackManager sweepstakesStackManager = new SweepstakesStackManager();
 
+            MarketingFirm marketingFirm = new MarketingFirm();
+            SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
+            Sweepstakes sweepstakes = new Sweepstakes();
             Contestant contestant = new Contestant();
             UserInterface userInterface = new UserInterface();
-            //userInterface.ContestantEmail();
-            Sweepstakes sweepstakes = new Sweepstakes();
-            sweepstakes.PickWinner();
-            Console.ReadLine();
+            
+            
             
         }
     }

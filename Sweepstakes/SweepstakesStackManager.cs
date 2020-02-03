@@ -8,11 +8,16 @@ namespace Sweepstakes
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        Stack<Sweepstakes> contestantNumberList; 
+        //Member Variables (HAS A)
+        Stack<Sweepstakes> contestantNumberList;
+
+        //Constructor
         public SweepstakesStackManager()
         {
             contestantNumberList = new Stack<Sweepstakes>();
         }
+
+        //Member Methods (CAN DO)
         public Sweepstakes GetSweepstakes()
         {
             return contestantNumberList.Pop();
@@ -24,11 +29,11 @@ namespace Sweepstakes
            
         }
 
-        //Member Variables (HAS A)
+        
 
-        //Constructor
+       
 
-        //Member Methods (CAN DO)
+       
        
 
 
