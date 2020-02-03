@@ -28,16 +28,9 @@ namespace Sweepstakes
             contestantNumberList.Push(sweepstakes);
            
         }
-
-        
-
        
 
        
-       
-
-
-
     }
     
 }

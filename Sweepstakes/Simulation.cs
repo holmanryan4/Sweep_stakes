@@ -31,6 +31,17 @@ namespace Sweepstakes
             return manager;
            
         }
-        pu
-    }
+        //public void RunSimulation()
+        //{
+        //    ISweepstakesManager manager = CreatingmarketingFirmWithManager();
+        //    MarketingFirm marketingFirm = new MarketingFirm(manager);
+        //    marketingFirm.CreateSweepstake();
+        //    SweepstakesStackManager sweepstakesStackManager = new SweepstakesStackManager();
+
+        //    SweepstakesQueueManager sweepstakesQueueManager = new SweepstakesQueueManager();
+        //    Sweepstakes sweepstakes = new Sweepstakes();
+
+            
+        //}
+}
 }

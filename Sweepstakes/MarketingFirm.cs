@@ -12,6 +12,8 @@ namespace Sweepstakes
         //Member Variables (HAS A)
         ISweepstakesManager manager;
 
+       
+
         //Constructor
         public MarketingFirm(ISweepstakesManager manager)
         {
@@ -22,7 +24,7 @@ namespace Sweepstakes
         public void CreateSweepstake()
         {
             Sweepstakes sweepstakes = new Sweepstakes();
-            // use manager to insert sweepstakes
+           
             manager.InsertSweepstakes(sweepstakes);
         }
        
