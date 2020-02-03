@@ -10,6 +10,14 @@ namespace Sweepstakes
     {
         static void Main(string[] args)
         {
+
+
+            Contestant contestant = new Contestant();
+            UserInterface userInterface = new UserInterface();
+            userInterface.ContestantEmail();
+            
+            Console.ReadLine();
+            
         }
     }
 }

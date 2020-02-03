@@ -6,47 +6,66 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class UserInterface 
+    class UserInterface
     {
 
         //Member Variables (HAS A)
-       
-        public  string firstName;
-        public static string lastName;
-        public static string emailAddress;
-
 
 
         //Constructor
-        public string FirstName { get { return firstName; } set { firstName = value; } }
-        public string LastName { get { return lastName; } set { lastName = value; } }
-        public string EmailAddress { get { return emailAddress; } set { emailAddress = value; } }
+        public bool IsEmailValid(string emailAddress)
+        {
+            //Console.WriteLine("Please enter your email address. Ex. 123@gmail.com");
+            //string emailAddress = Console.ReadLine();
 
 
+            //-------------------get help with making this work------------------------
+            try
+            {
+                Console.WriteLine("Valid email address");
+
+                var email = new System.Net.Mail.MailAddress(emailAddress);
+                return true;
+
+            }
+            catch (FormatException)
+            {
+               Console.WriteLine("Invalid email address please try again"); ContestantEmail();
+                return false;
+            }
+            //----------------------------------------------------------------------------------///
+        }
         //Member Methods (CAN DO)
-        public void ContestantFirstName()
+        public string ContestantFirstName()
         {
             Console.WriteLine("Please enter your first name.");
-            firstName = Console.ReadLine();
-            
-            
+            string firstName = Console.ReadLine();
+            return firstName;
+
         }
-        public void ContestantLastName()
+        public string ContestantLastName()
         {
             Console.WriteLine("Please enter your last name.");
-            LastName = Console.ReadLine();
+            string lastName = Console.ReadLine();
+            return lastName;
         }
-        public  void ContestantEmail()
+        public string ContestantEmail()
         {
+
             Console.WriteLine("Please enter your email address. Ex. 123@gmail.com");
-            EmailAddress = Console.ReadLine();
+            string emailAddress = Console.ReadLine();
+            
+
+            return emailAddress;
+
         }
         public void ContestantInfo()
         {
-            
+            // add to this do to the changes above
             ContestantFirstName();
             ContestantLastName();
             ContestantEmail();
         }
     }
+
 }

@@ -6,30 +6,35 @@ using System.Threading.Tasks;
 
 namespace Sweepstakes
 {
-    class Sweepstakes : Contestant
+    class Sweepstakes 
     {
 
         //Member Variables (HAS A)
-
+        Random random = new Random();
+        Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
+        
         //Constructor
-
+         
         //Member Methods (CAN DO)
-        public Sweepstakes()
+        public Sweepstakes(string name)
         {
-            Dictionary<int, string> addContestant = new Dictionary<int, string>();
-            addContestant.Add(1001, firstName);
-            addContestant.Add(1002, firstName);
-            addContestant.Add(1003, firstName);
-            addContestant.Add(1004, firstName);
-            addContestant.Add(1005, firstName);
+           
+           
 
         }
         public void RegisterContestant(Contestant contestant)
         {
-
+            contestants.Add(1, contestant);
+            contestants.Add(2, contestant);
+            contestants.Add(3, contestant);
         }
-        public void PickWinner()
+        public int PickWinner()
         {
+            Console.WriteLine("The Sweepstakes Winner is: " )
+            int contestants;
+            contestants = random.Next(1,4);
+            return contestants;
+            
 
         }
         public void PrintContestantInfo(Contestant contestant)
