@@ -19,7 +19,7 @@ namespace Sweepstakes
             //string emailAddress = Console.ReadLine();
 
 
-            //-------------------get help with making this work------------------------
+           
             try
             {
                 Console.WriteLine("Valid email address");
@@ -33,7 +33,7 @@ namespace Sweepstakes
                Console.WriteLine("Invalid email address please try again"); ContestantEmail();
                 return false;
             }
-            //----------------------------------------------------------------------------------///
+           
         }
         //Member Methods (CAN DO)
         public string ContestantFirstName()
@@ -54,7 +54,7 @@ namespace Sweepstakes
 
             Console.WriteLine("Please enter your email address. Ex. 123@gmail.com");
             string emailAddress = Console.ReadLine();
-            
+            IsEmailValid(emailAddress);
 
             return emailAddress;
 

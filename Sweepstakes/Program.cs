@@ -14,8 +14,9 @@ namespace Sweepstakes
 
             Contestant contestant = new Contestant();
             UserInterface userInterface = new UserInterface();
-            userInterface.ContestantEmail();
-            
+            //userInterface.ContestantEmail();
+            Sweepstakes sweepstakes = new Sweepstakes();
+            sweepstakes.PickWinner();
             Console.ReadLine();
             
         }

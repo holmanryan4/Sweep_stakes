@@ -10,34 +10,47 @@ namespace Sweepstakes
     {
 
         //Member Variables (HAS A)
-        Random random = new Random();
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
-        
+
         //Constructor
-         
+       
         //Member Methods (CAN DO)
         public Sweepstakes(string name)
         {
-           
+            
            
 
         }
         public void RegisterContestant(Contestant contestant)
         {
-            contestants.Add(1, contestant);
-            contestants.Add(2, contestant);
-            contestants.Add(3, contestant);
-        }
-        public int PickWinner()
-        {
-            Console.WriteLine("The Sweepstakes Winner is: " )
-            int contestants;
-            contestants = random.Next(1,4);
-            return contestants;
+            contestant.Registrationnumber = contestants.Count;
+            contestants.Add(contestants.Count, contestant);
             
-
+        }
+        public int Ran()
+        {
+            Random random = new Random();
+            int contestants;
+            contestants = random.Next(1, 4);
+            return contestants;
+        }
+        public void PickWinner()
+        {
+            Console.WriteLine("The Sweepstakes Winner is: " + Ran());
         }
         public void PrintContestantInfo(Contestant contestant)
+        {
+            Console.WriteLine("Enter the contestant name you want to print: ");
+            string value = Console.ReadLine();
+            foreach (KeyValuePair<int, Contestant> dictContestant in contestants)
+            {
+                if(Equals(dictContestant.Value, value))
+                {
+                    Console.WriteLine($"Contestant number: {dictContestant.Key} Contestant information: {dictContestant.Value}");
+                }
+            }
+        }
+        public void RunSweepstakes()
         {
 
         }
