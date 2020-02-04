@@ -15,10 +15,6 @@ namespace Sweepstakes
         //Constructor
         public bool IsEmailValid(string emailAddress)
         {
-            //Console.WriteLine("Please enter your email address. Ex. 123@gmail.com");
-            //string emailAddress = Console.ReadLine();
-
-
            
             try
             {

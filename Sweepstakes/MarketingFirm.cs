@@ -23,7 +23,8 @@ namespace Sweepstakes
         //Member Methods (CAN DO)
         public void CreateSweepstake()
         {
-            Sweepstakes sweepstakes = new Sweepstakes();
+            
+            Sweepstakes sweepstakes = new Sweepstakes("Get name");
            
             manager.InsertSweepstakes(sweepstakes);
         }
