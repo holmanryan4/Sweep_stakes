@@ -49,7 +49,7 @@ namespace Sweepstakes
             string value = Console.ReadLine();
             foreach (KeyValuePair<int, Contestant> dictContestant in contestants)
             {
-                if (Equals((dictContestant.Value, value)))
+                if (dictContestant.Value.FirstName == value)
                 {
                     Console.WriteLine($"Contestant number: {dictContestant.Key} Contestant information: {dictContestant.Value}");
                 }
